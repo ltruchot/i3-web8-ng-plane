@@ -1,0 +1,9 @@
+<ul>
+    <app-passager 
+        *ngFor="let passager of passagers; let i = index;" 
+        [infos]="passager"
+        [id]="i + 1"
+        (hasChanged)="checkAll()">
+    </app-passager>
+</ul>
+{{ !allCheckedIn ? "Embarquement en cours !" : "Décollage !" }}

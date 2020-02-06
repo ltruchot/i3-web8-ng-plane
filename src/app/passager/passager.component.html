@@ -1,0 +1,9 @@
+<li>
+    {{ id + 1 }} - 
+    {{ infos.nom }} - 
+    <span 
+    (click)="toggleCheckedIn()" 
+    *ngIf="infos.checkedIn" 
+    class="checked in"></span>
+    <span (click)="toggleCheckedIn()" *ngIf="!infos.checkedIn" class="checked"></span>
+</li>
