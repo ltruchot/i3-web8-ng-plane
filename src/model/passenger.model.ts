@@ -3,4 +3,6 @@ export type Passenger = {
     nom: string;
     age: number;
     checkedIn: boolean;
+    price: number;
+    checkedAt?: number;
 }

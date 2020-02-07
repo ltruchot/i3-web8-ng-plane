@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: "app-root",
@@ -7,5 +9,13 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title: string = "Embarquement des passagers";
-  constructor () {}
+  article: any = null;
+  constructor (public http: HttpClient) {
+  
+  }
+  ngOnInit () {
+    this.http.get("https://jsonplaceholder.typicode.com/todos/1").subscribe((data) => {
+      this.article = data;
+    });
+  }
 }

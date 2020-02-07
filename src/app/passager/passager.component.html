@@ -6,4 +6,9 @@
     *ngIf="infos.checkedIn" 
     class="checked in"></span>
     <span (click)="toggleCheckedIn()" *ngIf="!infos.checkedIn" class="checked"></span>
+    (Prix payé: {{ infos.price | currency:"EUR" }})    <div *ngIf="infos.checkedIn"><em>Date d'enregistrement: {{ infos.checkedAt | date:"dd MMMM yyyy":"CET":"fr-FR" | uppercase }}</em></div>
+
+
+
+
 </li>
